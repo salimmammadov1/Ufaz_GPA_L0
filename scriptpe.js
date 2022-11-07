@@ -177,7 +177,7 @@ const calculate = () => {
        grades = "A";
     } else if (gpa <= 13.4999999 && gpa >= 12) {
        grades = "B";
-    } else if (gpa <= 11.99999 && percentage >= 10) {
+    } else if (gpa <= 11.99999 && gpa >= 10) {
        grades = "C";
     } else {
        grades = "F";

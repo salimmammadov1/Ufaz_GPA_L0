@@ -5,23 +5,25 @@ const calculate = () => {
     let math2 = document.querySelector("#math2").value;
     let mathfinal = document.querySelector("#mathfinal").value;
 
-    let mechanics = document.querySelector("#mechanics").value;
-    let thermodynamics = document.querySelector("#thermodynamics").value;
-    let electrostatics = document.querySelector("#electrostatics").value;
+    let vibrations1 = document.querySelector("#vibrations1").value;
+    let vibrations2 = document.querySelector("#vibrations2").value;
+    let waves1 = document.querySelector("#waves1").value;
+    let waves2 = document.querySelector("#waves2").value;
+    let optics1 = document.querySelector("#optics1").value;
+    let optics2 = document.querySelector("#optics2").value;
+    let phylab = document.querySelector("#phylab").value;
 
     let aom1 = document.querySelector("#aom1").value;
-    let aom2 = document.querySelector("#aom2").value;
     let aomfinal = document.querySelector("#aomfinal").value;
     
     let tom1 = document.querySelector("#tom1").value;
-    let tom2 = document.querySelector("#tom2").value;
     let tomfinal = document.querySelector("#tomfinal").value;
     
     let pw1 = document.querySelector("#pw1").value;
     let pw2 = document.querySelector("#pw2").value;
     
-    let hem1 = document.querySelector("#hem1").value;
-    let hemfinal = document.querySelector("#hemfinal").value;
+    let ibw1 = document.querySelector("#ibw1").value;
+    let ibw2 = document.querySelector("#ibw2").value;
     
     let fr1 = document.querySelector("#fr1").value;
     let fr2 = document.querySelector("#fr2").value;
@@ -31,12 +33,12 @@ const calculate = () => {
     let en2 = document.querySelector("#en2").value;
     let enfinal = document.querySelector("#enfinal").value;
     
-    let ituo1 = document.querySelector("#ituo1").value;
-    let ituo2 = document.querySelector("#ituo2").value;
+    let heattrmain = document.querySelector("#heattrmain").value;
+    let heattrreport = document.querySelector("#heattrreport").value;
 
-    let fewp1 = document.querySelector("#fewp1").value;
-    let fewp2 = document.querySelector("#fewp2").value;
-    let fewpfinal = document.querySelector("#fewpfinal").value;
+    let datab1 = document.querySelector("#datab1").value;
+    let datab2 = document.querySelector("#datab2").value;
+    let databfinal = document.querySelector("#databfinal").value;
 
 
 
@@ -51,29 +53,35 @@ const calculate = () => {
    if(mathfinal == ""){
       mathfinal=0;
    }
-   if(mechanics == ""){
-      mechanics=0;
+   if(vibrations1 == ""){
+      vibrations1=0;
    }
-   if(thermodynamics == ""){
-      thermodynamics=0;
+   if(vibrations2 == ""){
+      vibrations2=0;
    }
-   if(electrostatics == ""){
-      electrostatics=0;
+   if(waves1 == ""){
+      waves1=0;
+   }
+   if(waves2 == ""){
+      waves2=0;
+   }
+   if(optics1 == ""){
+      optics1=0;
+   }
+   if(optics2 == ""){
+      optics2=0;
+   }
+   if(phylab == ""){
+      phylab=0;
    }
    if(aom1 == ""){
       aom1=0;
-   }
-   if(aom2 == ""){
-      aom2=0;
    }
    if(aomfinal == ""){
       aomfinal=0;
    }
    if(tom1 == ""){
       tom1=0;
-   }
-   if(tom2 == ""){
-      tom2=0;
    }
    if(tomfinal == ""){
       tomfinal=0;
@@ -84,11 +92,11 @@ const calculate = () => {
    if(pw2 == ""){
       pw2=0;
    }
-   if(hem1 == ""){
-      hem1=0;
+   if(ibw1 == ""){
+      ibw1=0;
    }
-   if(hemfinal == ""){
-      hemfinal=0;
+   if(ibw2 == ""){
+      ibw2=0;
    }
    if(fr1 == ""){
       fr1=0;
@@ -108,20 +116,20 @@ const calculate = () => {
    if(enfinal == ""){
       enfinal=0;
    }
-   if(ituo1 == ""){
-      ituo1=0;
+   if(heattrmain == ""){
+      heattrmain=0;
    }
-   if(ituo2 == ""){
-      ituo2=0;
+   if(heattrreport == ""){
+      heattrreport=0;
    }
-   if(fewp1 == ""){
-      fewp1=0;
+   if(datab1 == ""){
+      datab1=0;
    }
-   if(fewp2 == ""){
-      fewp2=0;
+   if(datab2 == ""){
+      datab2=0;
    }
-   if(fewpfinal == ""){
-      fewpfinal=0;
+   if(databfinal == ""){
+      databfinal=0;
    }
 
 
@@ -161,27 +169,29 @@ const calculate = () => {
    parseFloat(mathfinal)*3);   
 
    let physicsave = 
-   (parseFloat(mechanics)*2 +
-   parseFloat(thermodynamics)*2 +
-   parseFloat(electrostatics)*2);
+   (parseFloat(vibrations1)*1/3 +
+   parseFloat(vibrations2)*2/3 +
+   parseFloat(waves1)*1/3 +
+   parseFloat(waves2)*2/3 +
+   parseFloat(optics1)*1/3 +
+   parseFloat(optics2)*2/3 +
+   parseFloat(phylab)*3);
 
    let aomave = 
-   (parseFloat(aom1)*0.5 +
-   parseFloat(aom2)*0.5 +
-   parseFloat(aomfinal)*1);
+   (parseFloat(aom1)*0.75 +
+   parseFloat(aomfinal)*1.25);
 
    let tomave = 
-   (parseFloat(tom1)*0.5 +
-   parseFloat(tom2)*0.5 +
-   parseFloat(tomfinal)*1);
+   (parseFloat(tom1)*0.75 +
+   parseFloat(tomfinal)*1.25);
 
    let pwave = 
    (parseFloat(pw1)*1 +
    parseFloat(pw2)*1);
 
-   let hemave = 
-   (parseFloat(hem1)*1 +
-   parseFloat(hemfinal)*1);
+   let ibwave = 
+   (parseFloat(ibw1)*1 +
+   parseFloat(ibw2)*1);
 
    let frave = 
    (parseFloat(fr1)*0.5 +
@@ -193,16 +203,14 @@ const calculate = () => {
    parseFloat(en2)*0.75 +
    parseFloat(enfinal)*0.75);
 
-   let ituoave = 
-   (parseFloat(ituo1)*1 +
-   parseFloat(ituo2)*2);
+   let heattrave = 
+   (parseFloat(heattrreport)*1 +
+   parseFloat(heattrmain)*2);
 
-   let fewpave = 
-   (parseFloat(fewp1)*0.3 +
-   parseFloat(fewp2)*1.2 +
-   parseFloat(fewpfinal)*1.5);
-
-
+   let databave = 
+   (parseFloat(datab1)*0.3 +
+   parseFloat(datab2)*1.2 +
+   parseFloat(databfinal)*1.5);
 
 
 
@@ -211,7 +219,9 @@ const calculate = () => {
 
 
 
-   let totalgrades = (mathave+physicsave+aomave+tomave+pwave+hemave+frave+enave+ituoave+fewpave)/30;
+
+
+   let totalgrades = (mathave+physicsave+aomave+tomave+pwave+ibwave+frave+enave+heattrave+databave)/30;
 
     // Checking the condition for the providing the
     // grade to student based on percentage
@@ -249,15 +259,15 @@ const calculate = () => {
          <h3><b>PG : ${percentage}%</b></h3><br>
          Math - ${(mathave/6).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((mathave/6)/0.2).toFixed(1)}%</sub> <br>
          Physics - ${(physicsave/6).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((physicsave/6)/0.2).toFixed(1)}%</sub> <br>
+         IBW - ${(ibwave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((ibwave/2)/0.2).toFixed(1)}%</sub> <br>
+         French - ${(frave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((frave/2)/0.2).toFixed(1)}%</sub> <br>
+         English - ${(enave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((enave/2)/0.2).toFixed(1)}%</sub> <br>
          Chemistry - ${((aomave+tomave+pwave)/6).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${(((aomave+tomave+pwave)/6)/0.2).toFixed(1)}%</sub> <br>
          - Aom - ${(aomave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((aomave/2)/0.2).toFixed(1)}%</sub> <br>
          - Tom - ${(tomave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((tomave/2)/0.2).toFixed(1)}%</sub> <br>
          - CPW - ${(pwave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((pwave/2)/0.2).toFixed(1)}%</sub> <br>
-         Higher Ed Meth - ${(hemave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((hemave/2)/0.2).toFixed(1)}%</sub> <br>
-         French - ${(frave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((frave/2)/0.2).toFixed(1)}%</sub> <br>
-         English - ${(enave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((enave/2)/0.2).toFixed(1)}%</sub> <br>
-         ItUO - ${(ituoave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((ituoave/3)/0.2).toFixed(1)}%</sub> <br>
-         Front-End - ${(fewpave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((fewpave/3)/0.2).toFixed(1)}%</sub> <br>
+         Heat Transfer - ${(heattrave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((heattrave/3)/0.2).toFixed(1)}%</sub> <br>
+         Databases - ${(databave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((databave/3)/0.2).toFixed(1)}%</sub> <br>
           
          <br><br> 
          </button>
