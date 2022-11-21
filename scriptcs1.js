@@ -39,6 +39,38 @@ const calculate = () => {
 
 
 
+   let currentcoef =0;
+   let currentgpa =0;
+   let currenttotalgrades=0;
+   const midterms = [math1,math2,mathfinal,
+     vibrations1,vibrations2,waves1,waves2, optics1, optics2, phylab, 
+     ibw1,ibw2,fr1,fr2,frfinal,en1,en2,enfinal,
+     dsa1,dsa2,dsafinal, 
+     comparc1,comparc2,comparcfinal,
+     datab1,datab2,databfinal];
+   const coefs = [1, 2, 3,
+     0.33,0.66,0.33,0.66,0.33,0.66,3,
+     1,1,0.5,0.75,0.75,0.5,0.75,0.75,
+     1.8,1.8,2.4,
+     0.5,1,1.5,
+     0.3, 1.2, 1.5
+  ];
+   for (let i = 0; i < midterms.length; i++) {
+      if(parseFloat(midterms[i])>-1){
+         currentcoef = currentcoef + parseFloat(coefs[i]);
+         currenttotalgrades =currenttotalgrades+ parseFloat(midterms[i])*parseFloat(coefs[i]);
+      }
+    };
+    if(currentcoef==0){
+     currentgpa = 0
+    }else{
+     currentgpa = (currenttotalgrades) / (currentcoef) ;
+
+    }
+    currentgpa = currentgpa/0.2;
+
+
+
 
   if(math1 == ""){
      math1=0;
@@ -229,7 +261,9 @@ if(comparcfinal == ""){
         Data S.A. - ${(dsaave/6).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((dsaave/6)/0.2).toFixed(1)}%</sub> <br>
         Comp Arc - ${(comparcave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((comparcave/3)/0.2).toFixed(1)}%</sub> <br>
         Databases - ${(databave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((databave/3)/0.2).toFixed(1)}%</sub> <br>
-         
+        ----------- <br>
+         Current Av - ${(currentgpa*0.2).toFixed(3)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${(currentgpa).toFixed(2)}%</sub> <br>
+          
         <br><br> 
         </button>
          `;

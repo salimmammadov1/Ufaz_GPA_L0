@@ -41,6 +41,39 @@ const calculate = () => {
     let databfinal = document.querySelector("#databfinal").value;
 
 
+    let currentcoef =0;
+    let currentgpa =0;
+    let currenttotalgrades=0;
+    const midterms = [math1,math2,mathfinal,
+      vibrations1,vibrations2,waves1,waves2, optics1, optics2, phylab, 
+      ibw1,ibw2,fr1,fr2,frfinal,en1,en2,enfinal,
+      aom1, aomfinal,tom1,tomfinal,pw1,pw2,
+      heattrmain,heattrreport,
+      datab1,datab2,databfinal];
+    const coefs = [1, 2, 3,
+      0.33,0.66,0.33,0.66,0.33,0.66,3,
+      1,1,0.5,0.75,0.75,0.5,0.75,0.75,
+      0.75,1.25,0.75,1.25,1,1,
+      2,1,
+      0.3, 1.2, 1.5
+   ];
+    for (let i = 0; i < midterms.length; i++) {
+       if(parseFloat(midterms[i])>-1){
+          currentcoef = currentcoef + parseFloat(coefs[i]);
+          currenttotalgrades =currenttotalgrades+ parseFloat(midterms[i])*parseFloat(coefs[i]);
+       }
+     };
+     if(currentcoef==0){
+      currentgpa = 0
+     }else{
+      currentgpa = (currenttotalgrades) / (currentcoef) ;
+
+     }
+     currentgpa = currentgpa/0.2;
+ 
+ 
+
+
 
 
 
@@ -268,6 +301,8 @@ const calculate = () => {
          - CPW - ${(pwave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((pwave/2)/0.2).toFixed(1)}%</sub> <br>
          Heat Transfer - ${(heattrave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((heattrave/3)/0.2).toFixed(1)}%</sub> <br>
          Databases - ${(databave/3).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((databave/3)/0.2).toFixed(1)}%</sub> <br>
+         ----------- <br>
+         Current Av - ${(currentgpa*0.2).toFixed(3)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${(currentgpa).toFixed(2)}%</sub> <br>
           
          <br><br> 
          </button>

@@ -39,6 +39,34 @@ const calculate = () => {
 
 
 
+
+    let currentcoef =0;
+    let currentgpa =0;
+    let currenttotalgrades=0;
+    const midterms = [math1,math2,mathfinal,mechanics,thermodynamics,electrostatics,aom1,aom2,aomfinal,tom1,tom2,tomfinal,pw1,pw2,hem1,hemfinal,fr1,fr2,frfinal,en1,en2,enfinal,
+      geo1,geo2,
+      pe]
+    const coefs = [1, 2, 3, 2, 2, 2, 0.5, 0.5, 1, 0.5, 0.5, 1, 1, 1, 1 , 1, 0.5 , 0.75, 0.75, 0.5, 0.75, 0.75,
+      2, 2,
+      2]
+    for (let i = 0; i < midterms.length; i++) {
+       if(parseFloat(midterms[i])>-1){
+          currentcoef = currentcoef + parseFloat(coefs[i]);
+          currenttotalgrades =currenttotalgrades+ parseFloat(midterms[i])*parseFloat(coefs[i]);
+       }
+     };
+     if(currentcoef==0){
+      currentgpa = 0
+     }else{
+      currentgpa = (currenttotalgrades) / (currentcoef) ;
+ 
+     }
+     currentgpa = currentgpa/0.2;
+ 
+ 
+ 
+
+
     if(math1 == ""){
       math1=0;
    }
@@ -219,6 +247,8 @@ const calculate = () => {
          English - ${(enave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((enave/2)/0.2).toFixed(1)}%</sub> <br>
          Geo - ${(geoave/4).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((geoave/4)/0.2).toFixed(1)}%</sub> <br>
          Petroleum - ${(peave/2).toFixed(2)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${((peave/2)/0.2).toFixed(1)}%</sub> <br>
+         ----------- <br>
+         Current Av - ${(currentgpa*0.2).toFixed(3)}<sub style="color:rgb(201, 201, 201);font-size:xx-small;">${(currentgpa).toFixed(2)}%</sub> <br>
           
          <br><br> 
          </button>
