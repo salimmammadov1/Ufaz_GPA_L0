@@ -48,8 +48,7 @@ const calculate = () => {
      vibrations1,vibrations2,waves1,waves2, optics1, optics2, phylab, 
      ibw1,ibw2,fr1,fr2,frfinal,en1,en2,enfinal,
      aom1, aomfinal,tom1,tomfinal,pw1,pw2,
-     heattrmain,heattrreport,
-     datab1,datab2,databfinal];
+     geo1,geo2,pe1,pe2];
    const coefs = [1, 2, 3,
      0.33,0.66,0.33,0.66,0.33,0.66,3,
      1,1,0.5,0.75,0.75,0.5,0.75,0.75,
