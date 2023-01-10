@@ -222,7 +222,7 @@ const calculate = () => {
        ).innerHTML =
           `<button
           id="resu"
-          style = "border-radius:10px;border-color:black;
+          style = "border-radius:10px;border-color:black;color:black;
          background-image: linear-gradient(to right bottom,rgb(110, 110, 110),rgb(148, 148, 148));"
          >   
          <h1><b>GPA : ${gpa}<sub style="color:rgb(201, 201, 201);font-size: small;">${grades}</sub></b></h1><br>
